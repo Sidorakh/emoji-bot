@@ -14,7 +14,7 @@ client.on('message',async(msg) => {
     }
     let emoji_free = msg.content.replace(unicode,'');
     emoji_free = emoji_free.replace(custom,'');
-    emoji_free = emoji_free.replace(/\s/,'');
+    emoji_free = emoji_free.replace(/\s/g,'');
     console.log(msg.content);
     if (emoji_free != '') {
         if (msg.deletable) {
@@ -25,7 +25,7 @@ client.on('message',async(msg) => {
 client.on('messageUpdate', (msg, new_msg) => {
     let emoji_free = new_msg.content.replace(unicode,'');
     emoji_free = emoji_free.replace(custom,'');
-    emoji_free = emoji_free.replace(/\s/,'');
+    emoji_free = emoji_free.replace(/\s/g,'');
     if (emoji_free != '') {
         if (new_msg.deletable) {
             new_msg.delete();
