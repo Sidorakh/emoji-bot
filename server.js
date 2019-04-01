@@ -23,6 +23,7 @@ client.on('message',async(msg) => {
     }
 });
 client.on('messageUpdate', (msg, new_msg) => {
+    if (msg.channel_id!=emoji_channel) return;
     let emoji_free = new_msg.content.replace(unicode,'');
     emoji_free = emoji_free.replace(custom,'');
     emoji_free = emoji_free.replace(/\s/g,'');
