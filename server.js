@@ -15,7 +15,7 @@ client.on('message',async(msg) => {
     let emoji_free = msg.content.replace(unicode,'');
     emoji_free = emoji_free.replace(custom,'');
     emoji_free = emoji_free.replace(/\s/g,'');
-    console.log(msg.content);
+    //console.log(msg.content);
     if (emoji_free != '' || msg.attachments.size > 0) {
         if (msg.deletable) {
             msg.delete();
